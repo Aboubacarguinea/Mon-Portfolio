@@ -2,13 +2,190 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio d'Aboubacar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Aboubacar</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f7ff;
+    color: #172554;
+}
+
+header {
+    background: #0b1f4d;
+    color: white;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    min-height: 75vh;
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #102d69, #2563eb);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: #1d4ed8;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 25px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+section {
+    padding: 70px 10%;
+}
+
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+section p {
+    line-height: 1.8;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills span {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 15px 22px;
+    border-radius: 8px;
+}
+
+.project {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #dbeafe;
+}
+
+footer {
+    background: #0b1f4d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+    nav a {
+        margin: 5px;
+    }
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+</style>
 </head>
+
 <body>
+
+<header>
+    <div class="logo">ABOUBACAR</div>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+    </nav>
+</header>
+
+<div class="hero" id="accueil">
     <h1>Bonjour, je suis Aboubacar !</h1>
-    <p>Bienvenue dans mon portfolio professionnel.</p>
-    <p>Je suis passionné par l'informatique et le développement web.</p>
+    <p>
+        Bienvenue dans mon portfolio professionnel.
+        Je suis passionné par l'informatique,
+        le développement web et les technologies numériques.
+    </p>
+    <a href="#apropos" class="btn">Découvrir mon profil</a>
+</div>
+
+<section id="apropos">
+    <h2>À propos de moi</h2>
+    <p>
+        Je suis un étudiant motivé, intéressé par
+        le développement informatique, le numérique
+        et le commerce international.
+        Mon objectif est de développer mes compétences
+        et de réaliser des projets innovants.
+    </p>
+</section>
+
+<section id="competences">
+    <h2>Mes compétences</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Informatique</span>
+        <span>Communication</span>
+        <span>Commerce numérique</span>
+    </div>
+</section>
+
+<section id="projets">
+    <h2>Mes projets</h2>
+    <div class="project">
+        <h3>Mon premier portfolio</h3>
+        <p>
+            Création de mon premier site web
+            avec HTML et CSS grâce à GitHub.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Aboubacar - Mon Portfolio
+</footer>
+
 </body>
 </html>
