@@ -1,1 +1,305 @@
 
+/* STYLE GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f3f7ff;
+    color: #172554;
+    line-height: 1.7;
+    transition: 0.4s;
+}
+
+/* HEADER */
+
+header {
+    background: #0b1f4d;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+/* BOUTON MODE SOMBRE */
+
+#darkMode {
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#darkMode:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+/* ACCUEIL */
+
+.hero {
+    min-height: 75vh;
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #102d69, #2563eb);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+/* BOUTONS */
+
+.btn {
+    display: inline-block;
+    align-self: flex-start;
+    background: white;
+    color: #1d4ed8;
+    padding: 13px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #dbeafe;
+    transform: translateY(-3px);
+}
+
+.whatsapp-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 70px 10%;
+    transition: 0.4s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+section h2 {
+    color: #1d4ed8;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+/* PHOTO */
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    border: 5px solid #2563eb;
+    transition: 0.4s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #2196f3;
+}
+
+/* COMPETENCES */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills span {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* PROJETS */
+
+.project {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #dbeafe;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    margin-bottom: 15px;
+    color: #1d4ed8;
+}
+
+/* CONTACT */
+
+#contact a {
+    display: inline-block;
+    margin-top: 15px;
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0b1f4d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* MODE SOMBRE */
+
+body.dark {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark header,
+body.dark footer {
+    background: #030712;
+}
+
+body.dark .hero {
+    background: linear-gradient(135deg, #020617, #172554);
+}
+
+body.dark section {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark section h2 {
+    color: #60a5fa;
+}
+
+body.dark .project {
+    background: #1f2937;
+    color: white;
+    box-shadow: 0 4px 15px #030712;
+}
+
+body.dark .project h3 {
+    color: #60a5fa;
+}
+
+body.dark .skills span {
+    background: #374151;
+    color: #93c5fd;
+}
+
+body.dark #contact a {
+    background: #2563eb;
+    color: white;
+}
+
+/* TELEPHONE */
+
+@media(max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 70px 8%;
+        min-height: 65vh;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 50px 8%;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .whatsapp-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
