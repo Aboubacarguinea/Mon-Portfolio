@@ -10,6 +10,30 @@
   display: block;
   margin: 20px auto;
 }
+        .profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.profile-photo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #2196f3;
+}
+        html {
+  scroll-behavior: smooth;
+}
+
+section {
+  transition: transform 0.4s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
 </style>
 <head>
 <meta charset="UTF-8">
