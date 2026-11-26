@@ -26,6 +26,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -33,11 +34,15 @@ header {
     font-weight: bold;
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
 nav a {
-   nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
     transition: 0.3s;
 }
 
@@ -111,34 +116,122 @@ section p {
     border-radius: 12px;
     box-shadow: 0 4px 15px #dbeafe;
 }
-<section id="parcours"<section id="formation">
-    <h2>Ma formation</h2>
+
+.project h3 {
+    margin-bottom: 15px;
+}
+
+#contact a {
+    display: inline-block;
+    margin-top: 15px;
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+footer {
+    background: #0b1f4d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero {
+        padding: 70px 8%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Aboubacar</div>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#formation">Formation</a>
+        <a href="#langues">Mes langues</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="accueil">
+    <h1>Bonjour, je suis Aboubacar !</h1>
+
+    <p>
+        Bienvenue dans mon portfolio professionnel.
+        Je suis passionné par l'informatique,
+        le développement web et les technologies numériques.
+    </p>
+
+    <a href="#apropos" class="btn">
+        Découvrir mon profil
+    </a>
+</div>
+
+<section id="apropos">
+    <h2>À propos de moi</h2>
+
+    <p>
+        Je suis un étudiant motivé, intéressé par
+        le développement informatique, le numérique
+        et le commerce international.
+        Mon objectif est de développer mes compétences
+        et de réaliser des projets innovants.
+    </p>
+</section>
+
+<section id="competences">
+    <h2>Mes compétences</h2>
+
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Informatique</span>
+        <span>Communication</span>
+        <span>Commerce numérique</span>
+    </div>
+</section>
+
+<section id="projets">
+    <h2>Mes projets</h2>
 
     <div class="project">
-        <h3>Formation académique</h3>
+        <h3>Mon premier portfolio</h3>
         <p>
-            Je poursuis mes études en Chine.
-            Je développe mes connaissances en langue chinoise,
-            en informatique et dans le domaine du numérique.
+            Création de mon premier site web
+            avec HTML et CSS grâce à GitHub.
         </p>
     </div>
 </section>
-section id="langues">
-    <h2>Mes langues</h2>
 
-    <div class="skills">
-        <span>Français</span>
-        <span>Arabe</span>
-        <span>Chinois</span>
-        <span>anglais</span>
-    </div>
-</section>
-
-
-nav a:hover {
-    color: #93c5fd;
-}
-    
+<section id="parcours">
     <h2>Mon parcours et mes objectifs professionnels</h2>
 
     <p>
@@ -159,94 +252,39 @@ nav a:hover {
     </p>
 </section>
 
-    <section id="contact">
+<section id="formation">
+    <h2>Ma formation</h2>
+
+    <div class="project">
+        <h3>Formation académique</h3>
+
+        <p>
+            Je poursuis mes études en Chine.
+            Je développe mes connaissances en langue chinoise,
+            en informatique et dans le domaine du numérique.
+        </p>
+    </div>
+</section>
+
+<section id="langues">
+    <h2>Mes langues</h2>
+
+    <div class="skills">
+        <span>Français</span>
+        <span>Arabe</span>
+        <span>Chinois</span>
+        <span>Anglais</span>
+    </div>
+</section>
+
+<section id="contact">
     <h2>Me contacter</h2>
+
     <p>Tu peux me contacter par e-mail :</p>
+
     <a href="mailto:aboubacarwaly224@gmail.com">
         Envoyer un e-mail
     </a>
-
-</section>
-    
-footer {
-    background: #0b1f4d;
-    color: white;
-    text-align: center;
-    padding: 25px;
-}
-
-@media(max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 18px;
-    }
-    nav a {
-        margin: 5px;
-    }
-    .hero h1 {
-        font-size: 34px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
- <div class="hero" id="accueil">
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#apropos">À propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#projets">Projets</a>
-        <a href="#parcours">Mon parcours</a>
-        <a href="#formation">Formation</a>
-       < a herf="#langues">Mes langues<a>
-        
-    </nav>
-</header>
-
-<div class="hero" id="accueil">
-    <h1>Bonjour, je suis Aboubacar !</h1>
-    <p>
-        Bienvenue dans mon portfolio professionnel.
-        Je suis passionné par l'informatique,
-        le développement web et les technologies numériques.
-    </p>
-    <a href="#apropos" class="btn">Découvrir mon profil</a>
-</div>
-
-<section id="apropos">
-    <h2>À propos de moi</h2>
-    <p>
-        Je suis un étudiant motivé, intéressé par
-        le développement informatique, le numérique
-        et le commerce international.
-        Mon objectif est de développer mes compétences
-        et de réaliser des projets innovants.
-    </p>
-</section>
-
-<section id="competences">
-    <h2>Mes compétences</h2>
-    <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Informatique</span>
-        <span>Communication</span>
-        <span>Commerce numérique</span>
-    </div>
-</section>
-
-<section id="projets">
-    <h2>Mes projets</h2>
-    <div class="project">
-        <h3>Mon premier portfolio</h3>
-        <p>
-            Création de mon premier site web
-            avec HTML et CSS grâce à GitHub.
-        </p>
-    </div>
 </section>
 
 <footer>
