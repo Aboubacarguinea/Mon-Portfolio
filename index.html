@@ -187,6 +187,47 @@ footer {
     padding: 25px;
 }
 
+    /* MODE SOMBRE */
+
+body.dark {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark section {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark section h2 {
+    color: #60a5fa;
+}
+
+body.dark .project {
+    background: #1f2937;
+    color: white;
+}
+
+body.dark .skills span {
+    background: #374151;
+    color: #93c5fd;
+}
+
+body.dark #contact a {
+    background: #2563eb;
+    color: white;
+}
+
+#darkMode {
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 /* TELEPHONE */
 
 @media(max-width: 600px) {
@@ -234,10 +275,27 @@ footer {
 </style>
 </head>
 
-<body>
+    <script>
+const darkMode = document.getElementById("darkMode");
 
+darkMode.addEventListener("click", function() {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        darkMode.textContent = "☀️ Mode clair";
+    } else {
+        darkMode.textContent = "🌙 Mode sombre";
+    }
+});
+</script>
+
+
+
+<body>
 <header>
     <div class="logo">Aboubacar</div>
+    
+    <button id="darkMode">🌙 Mode sombre</button>
 
     <nav>
         <a href="#accueil">Accueil</a>
