@@ -1,7 +1,10 @@
-let nom = "Aboubacar Camara";
-
-alert("Bienvenue sur mon portfolio, " + nom + " !");
 
 function saluer() {
-    alert("Bonjour Aboubacar Camara ! Bienvenue sur mon site.");
+    alert("Bienvenue sur mon portfolio ! Je suis Aboubacar Camara.");
 }
+
+function changerCouleur() {
+    document.body.classList.toggle("mode-sombre");
+}
+
+
