@@ -1,56 +1,358 @@
 
-function saluer() {
-    alert("Bienvenue sur mon portfolio ! Je suis Aboubacar Camara.");
+
+/* =================================
+   1. CONFIGURATION GENERALE
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const darkMode = document.getElementById("darkMode");
-
-    if (darkMode) {
-        darkMode.addEventListener("click", function () {
-
-            document.body.classList.toggle("mode-sombre");
-
-            if (document.body.classList.contains("mode-sombre")) {
-                darkMode.textContent = "☀️ Mode clair";
-            } else {
-                darkMode.textContent = "🌙 Mode sombre";
-            }
-
-        });
-    }
-
-});
-
-
-/* MODE SOMBRE */
-
-body.mode-sombre,
-body.mode-sombre * {
-    color: #ffffff !important;
+:root {
+    --primary: #1769e0;
+    --secondary: #0d47a1;
+    --background: #f4f7fc;
+    --surface: #ffffff;
+    --text: #263238;
+    --heading: #123b70;
+    --shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
+
+body {
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* =================================
+   2. MODE SOMBRE
+================================= */
 
 body.mode-sombre {
-    background: #121212 !important;
+    --background: #121212;
+    --surface: #1e1e1e;
+    --text: #eeeeee;
+    --heading: #90bfff;
+    --shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 body.mode-sombre header,
 body.mode-sombre section,
-body.mode-sombre .project,
 body.mode-sombre footer {
-    background: #1e1e1e !important;
+    background: var(--surface);
+    color: var(--text);
 }
 
-body.mode-sombre .hero {
-    background: linear-gradient(135deg, #10233f, #050b18) !important;
+body.mode-sombre h1,
+body.mode-sombre h2,
+body.mode-sombre h3,
+body.mode-sombre p,
+body.mode-sombre span,
+body.mode-sombre a {
+    color: var(--text);
+}
+
+/* =================================
+   3. EN-TETE
+================================= */
+
+header {
+    background: var(--surface);
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* =================================
+   4. BOUTON MODE SOMBRE
+================================= */
+
+#darkMode {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#darkMode:hover {
+    background: var(--secondary);
+    transform: scale(1.05);
+}
+
+/* =================================
+   5. ACCUEIL
+================================= */
+
+.hero {
+    min-height: 550px;
+    padding: 100px 8%;
+    background: linear-gradient(135deg, #1769e0, #082f78);
+    color: white;
+    text-align: left;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: white;
+    font-size: 19px;
+    max-width: 850px;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: white;
+    color: #1769e0;
+    padding: 13px 25px;
+    margin: 8px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #dceaff;
+    transform: translateY(-3px);
+}
+
+/* =================================
+   6. BOUTONS WHATSAPP
+================================= */
+
+.whatsapp-buttons {
+    margin-top: 20px;
+}
+
+.whatsapp-buttons .btn {
+    margin-right: 10px;
+}
+
+/* =================================
+   7. BOUTONS JAVASCRIPT
+================================= */
+
+.javascript-buttons {
+    margin-top: 20px;
+}
+
+.javascript-buttons button {
+    padding: 12px 22px;
+    margin: 6px;
+    border: none;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #1769e0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.javascript-buttons button:hover {
+    background: #dceaff;
+    transform: translateY(-3px);
+}
+
+/* =================================
+   8. SECTIONS
+================================= */
+
+section {
+    padding: 75px 8%;
+    background: var(--surface);
+    color: var(--text);
+    margin: 25px auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+section h2 {
+    font-size: 30px;
+    color: var(--heading);
+    margin-bottom: 25px;
+}
+
+section p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+/* =================================
+   9. PHOTO DE PROFIL
+================================= */
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+    display: block;
+    margin: 0 auto 25px;
+}
+
+/* =================================
+   10. COMPETENCES
+================================= */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills span {
+    background: #e3efff;
+    color: #1255a5;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
 body.mode-sombre .skills span {
-    background: #293d58 !important;
+    background: #293d58;
+    color: #ffffff;
 }
 
-body.mode-sombre button {
-    background: #2878d0 !important;
-    color: #ffffff !important;
+/* =================================
+   11. PROJETS
+================================= */
+
+.project {
+    background: var(--background);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid var(--primary);
+    margin-top: 20px;
+    box-shadow: var(--shadow);
+}
+
+.project h3 {
+    color: var(--heading);
+    margin-bottom: 12px;
+}
+
+/* =================================
+   12. CONTACT
+================================= */
+
+#contact a {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+#contact a:hover {
+    background: var(--secondary);
+}
+
+/* =================================
+   13. PIED DE PAGE
+================================= */
+
+footer {
+    background: #082f78;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+/* =================================
+   14. RESPONSIVE MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 40px 6%;
+        margin: 15px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .profile-photo {
+        width: 145px;
+        height: 145px;
+    }
+
 }
