@@ -315,3 +315,22 @@ body.dark #contact a {
 }
 
 
+body.mode-sombre {
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+body.mode-sombre section,
+body.mode-sombre header,
+body.mode-sombre nav {
+    background-color: #1e1e1e !important;
+    color: white !important;
+}
+
+body.mode-sombre h1,
+body.mode-sombre h2,
+body.mode-sombre p,
+body.mode-sombre a {
+    color: white;
+}
+
