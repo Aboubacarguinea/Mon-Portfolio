@@ -8,8 +8,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio professionnel d'Aboubacar Camara, étudiant passionné par l'informatique et le commerce international.">
     <title>Portfolio | Aboubacar Camara</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,9 +19,7 @@
 <header>
     <div class="logo">Aboubacar</div>
 
-    <button id="darkMode" type="button">
-        🌙 Mode sombre
-    </button>
+    <button id="darkMode" type="button">🌙 Mode sombre</button>
 
     <nav>
         <a href="#accueil">Accueil</a>
@@ -33,8 +33,9 @@
     </nav>
 </header>
 
-<div class="hero" id="accueil">
+<main>
 
+<div class="hero" id="accueil">
     <h1>Bonjour, je suis Aboubacar !</h1>
 
     <p>
@@ -45,32 +46,28 @@
         apprendre, pratiquer et participer à des projets innovants.
     </p>
 
-    <a href="#apropos" class="btn">
-        Découvrir mon profil
-    </a>
+    <a href="#apropos" class="btn">Découvrir mon profil</a>
 
     <div class="whatsapp-buttons">
         <a href="https://wa.me/224622115636"
-           class="btn" target="_blank">
+           class="btn" target="_blank" rel="noopener noreferrer">
             WhatsApp Guinée
         </a>
 
         <a href="https://wa.me/8613032510590"
-           class="btn" target="_blank">
+           class="btn" target="_blank" rel="noopener noreferrer">
             WhatsApp Chine
         </a>
     </div>
 
     <div class="javascript-buttons">
-        <button onclick="saluer()">Me saluer</button>
+        <button id="saluer" type="button">Me saluer</button>
     </div>
-
 </div>
 
 <section id="apropos">
-
     <img src="aboubacar.jpg"
-         alt="Photo de Aboubacar"
+         alt="Photo de profil d'Aboubacar Camara"
          class="profile-photo">
 
     <h2>À propos de moi</h2>
@@ -79,11 +76,9 @@
         Je suis un étudiant motivé, intéressé par
         le développement informatique, le numérique
         et le commerce international.
-
         Mon objectif est de développer mes compétences
         et de réaliser des projets innovants.
     </p>
-
 </section>
 
 <section id="competences">
@@ -107,6 +102,7 @@
             Création de mon premier site web
             avec HTML et CSS grâce à GitHub.
         </p>
+        <span class="project-tag">HTML • CSS • GitHub</span>
     </div>
 </section>
 
@@ -165,13 +161,11 @@
     </a>
 </section>
 
+</main>
+
 <footer>
     © 2026 Aboubacar Camara - Mon Portfolio
 </footer>
 
-<script src="script.js"></script>
-
 </body>
 </html>
-
-
