@@ -298,6 +298,18 @@ body.dark #contact a {
 
     .whatsapp-buttons {
         flex-direction: column;
+
+        .mode-sombre {
+    background-color: #121212;
+    color: white;
+}
+
+.mode-sombre h1,
+.mode-sombre h2,
+.mode-sombre p {
+    color: white;
+}
+
         align-items: flex-start;
     }
 }
