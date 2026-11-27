@@ -1,5 +1,4 @@
 
-
 /* =================================
    1. CONFIGURATION GENERALE
 ================================= */
@@ -29,6 +28,14 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 120px;
+}
+
 /* =================================
    2. MODE SOMBRE
 ================================= */
@@ -48,13 +55,45 @@ body.mode-sombre footer {
     color: var(--text);
 }
 
-body.mode-sombre h1,
 body.mode-sombre h2,
 body.mode-sombre h3,
-body.mode-sombre p,
-body.mode-sombre span,
-body.mode-sombre a {
+body.mode-sombre section p {
     color: var(--text);
+}
+
+body.mode-sombre .logo {
+    color: #69a8ff;
+}
+
+body.mode-sombre nav a {
+    color: #ffffff;
+}
+
+body.mode-sombre nav a:hover {
+    color: #69a8ff;
+}
+
+body.mode-sombre .project {
+    background: #292929;
+    color: #ffffff;
+}
+
+body.mode-sombre .project h3,
+body.mode-sombre .project p {
+    color: #ffffff;
+}
+
+body.mode-sombre .skills span {
+    background: #293d58;
+    color: #ffffff;
+}
+
+body.mode-sombre .profile-photo {
+    border-color: #69a8ff;
+}
+
+body.mode-sombre #contact a {
+    color: #ffffff;
 }
 
 /* =================================
@@ -161,7 +200,7 @@ nav a:hover {
 }
 
 /* =================================
-   6. BOUTONS WHATSAPP
+   6. WHATSAPP
 ================================= */
 
 .whatsapp-buttons {
@@ -173,7 +212,7 @@ nav a:hover {
 }
 
 /* =================================
-   7. BOUTONS JAVASCRIPT
+   7. JAVASCRIPT
 ================================= */
 
 .javascript-buttons {
@@ -185,7 +224,7 @@ nav a:hover {
     margin: 6px;
     border: none;
     border-radius: 25px;
-    background: #ffffff;
+    background: white;
     color: #1769e0;
     font-weight: bold;
     cursor: pointer;
@@ -238,7 +277,7 @@ section p {
 }
 
 /* =================================
-   10. COMPETENCES
+   10. COMPETENCES ET LANGUES
 ================================= */
 
 .skills {
@@ -253,15 +292,15 @@ section p {
     padding: 12px 22px;
     border-radius: 25px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-body.mode-sombre .skills span {
-    background: #293d58;
-    color: #ffffff;
+.skills span:hover {
+    transform: translateY(-4px);
 }
 
 /* =================================
-   11. PROJETS
+   11. CARTES DES PROJETS
 ================================= */
 
 .project {
@@ -271,11 +310,33 @@ body.mode-sombre .skills span {
     border-left: 5px solid var(--primary);
     margin-top: 20px;
     box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .project h3 {
     color: var(--heading);
     margin-bottom: 12px;
+}
+
+.project-tag {
+    display: inline-block;
+    background: #dceaff;
+    color: #1255a5;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+body.mode-sombre .project-tag {
+    background: #293d58;
+    color: #ffffff;
 }
 
 /* =================================
@@ -290,10 +351,12 @@ body.mode-sombre .skills span {
     border-radius: 25px;
     text-decoration: none;
     margin-top: 15px;
+    transition: 0.3s;
 }
 
 #contact a:hover {
     background: var(--secondary);
+    transform: translateY(-3px);
 }
 
 /* =================================
@@ -317,11 +380,16 @@ footer {
     header {
         flex-direction: column;
         text-align: center;
+        padding: 18px 4%;
     }
 
     nav {
         justify-content: center;
         gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
     }
 
     .hero {
@@ -335,6 +403,10 @@ footer {
 
     .hero p {
         font-size: 16px;
+    }
+
+    .hero .btn {
+        padding: 11px 17px;
     }
 
     section {
@@ -353,6 +425,25 @@ footer {
     .profile-photo {
         width: 145px;
         height: 145px;
+    }
+
+    .whatsapp-buttons .btn {
+        margin: 7px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        gap: 9px;
+    }
+
+    nav a {
+        font-size: 13px;
     }
 
 }
