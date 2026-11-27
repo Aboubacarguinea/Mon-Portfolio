@@ -1,20 +1,30 @@
+
 function saluer() {
     alert("Bienvenue sur mon portfolio ! Je suis Aboubacar Camara.");
 }
 
-const darkMode = document.getElementById("darkMode");
+document.addEventListener("DOMContentLoaded", function () {
 
-darkMode.addEventListener("click", function () {
-    document.body.classList.toggle("mode-sombre");
+    const darkMode = document.getElementById("darkMode");
 
-    if (document.body.classList.contains("mode-sombre")) {
-        darkMode.textContent = "☀️ Mode clair";
-    } else {
-        darkMode.textContent = "🌙 Mode sombre";
+    if (darkMode) {
+        darkMode.addEventListener("click", function () {
+
+            document.body.classList.toggle("mode-sombre");
+
+            if (document.body.classList.contains("mode-sombre")) {
+                darkMode.textContent = "☀️ Mode clair";
+            } else {
+                darkMode.textContent = "🌙 Mode sombre";
+            }
+
+        });
     }
+
 });
 
-/* CORRECTION FINALE DES TEXTES EN MODE SOMBRE */
+
+/* MODE SOMBRE */
 
 body.mode-sombre,
 body.mode-sombre * {
