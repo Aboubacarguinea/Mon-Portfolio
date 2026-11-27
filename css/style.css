@@ -13,3 +13,34 @@ darkMode.addEventListener("click", function () {
         darkMode.textContent = "🌙 Mode sombre";
     }
 });
+
+/* CORRECTION FINALE DES TEXTES EN MODE SOMBRE */
+
+body.mode-sombre,
+body.mode-sombre * {
+    color: #ffffff !important;
+}
+
+body.mode-sombre {
+    background: #121212 !important;
+}
+
+body.mode-sombre header,
+body.mode-sombre section,
+body.mode-sombre .project,
+body.mode-sombre footer {
+    background: #1e1e1e !important;
+}
+
+body.mode-sombre .hero {
+    background: linear-gradient(135deg, #10233f, #050b18) !important;
+}
+
+body.mode-sombre .skills span {
+    background: #293d58 !important;
+}
+
+body.mode-sombre button {
+    background: #2878d0 !important;
+    color: #ffffff !important;
+}
