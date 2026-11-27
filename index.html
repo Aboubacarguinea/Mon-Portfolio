@@ -1,24 +1,20 @@
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Portfolio | Aboubacar</title>
-    
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Aboubacar Camara</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-    
-</body>
-    
-<script src="script.js"></script>
-</body>
-</html>
-<!-- HEADER -->
+
+<body>
 
 <header>
-
     <div class="logo">Aboubacar</div>
 
     <button id="darkMode" type="button">
@@ -35,31 +31,25 @@
         <a href="#langues">Langues</a>
         <a href="#contact">Contact</a>
     </nav>
-
 </header>
-
-<!-- ACCUEIL -->
 
 <div class="hero" id="accueil">
 
-    
-<h1>Bonjour, je suis Aboubacar !</h1>
+    <h1>Bonjour, je suis Aboubacar !</h1>
 
-<p>
-  Étudiant passionné par les technologies numériques,
-  le développement informatique et l'intelligence artificielle.
-  Je développe progressivement mes compétences en programmation
-  et je recherche une opportunité de stage en Chine pour
-  apprendre, pratiquer et participer à des projets innovants.
-</p>
-
+    <p>
+        Étudiant passionné par les technologies numériques,
+        le développement informatique et l'intelligence artificielle.
+        Je développe progressivement mes compétences en programmation
+        et je recherche une opportunité de stage en Chine pour
+        apprendre, pratiquer et participer à des projets innovants.
+    </p>
 
     <a href="#apropos" class="btn">
         Découvrir mon profil
     </a>
 
     <div class="whatsapp-buttons">
-
         <a href="https://wa.me/224622115636"
            class="btn" target="_blank">
             WhatsApp Guinée
@@ -69,19 +59,13 @@
            class="btn" target="_blank">
             WhatsApp Chine
         </a>
+    </div>
 
+    <div class="javascript-buttons">
+        <button onclick="saluer()">Me saluer</button>
     </div>
 
 </div>
-
-<div class="javascript-buttons">
-    <button onclick="saluer()">Découvrir mon profil</button>
-
-    <button onclick="changerCouleur()">Changer la couleur</button>
-</div>
-
-
-<!-- A PROPOS -->
 
 <section id="apropos">
 
@@ -102,10 +86,7 @@
 
 </section>
 
-<!-- COMPETENCES -->
-
 <section id="competences">
-
     <h2>Mes compétences</h2>
 
     <div class="skills">
@@ -115,32 +96,21 @@
         <span>Communication</span>
         <span>Commerce numérique</span>
     </div>
-
 </section>
 
-<!-- PROJETS -->
-
 <section id="projets">
-
     <h2>Mes projets</h2>
 
     <div class="project">
-
         <h3>Mon premier portfolio</h3>
-
         <p>
             Création de mon premier site web
             avec HTML et CSS grâce à GitHub.
         </p>
-
     </div>
-
 </section>
 
-<!-- PARCOURS -->
-
 <section id="parcours">
-
     <h2>Mon parcours et mes objectifs professionnels</h2>
 
     <p>
@@ -159,33 +129,22 @@
         développer des projets internationaux entre
         la Chine et l'Afrique.
     </p>
-
 </section>
 
-<!-- FORMATION -->
-
 <section id="formation">
-
     <h2>Ma formation</h2>
 
     <div class="project">
-
         <h3>Formation académique</h3>
-
         <p>
             Je poursuis mes études en Chine.
             Je développe mes connaissances en langue chinoise,
             en informatique et dans le domaine du numérique.
         </p>
-
     </div>
-
 </section>
 
-<!-- LANGUES -->
-
 <section id="langues">
-
     <h2>Mes langues</h2>
 
     <div class="skills">
@@ -194,13 +153,9 @@
         <span>Chinois</span>
         <span>Anglais</span>
     </div>
-
 </section>
 
-<!-- CONTACT -->
-
 <section id="contact">
-
     <h2>Me contacter</h2>
 
     <p>Tu peux me contacter par e-mail :</p>
@@ -208,42 +163,15 @@
     <a href="mailto:aboubacarwaly224@gmail.com">
         Envoyer un e-mail
     </a>
-
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-    © 2026 Aboubacar - Mon Portfolio
+    © 2026 Aboubacar Camara - Mon Portfolio
 </footer>
 
-<!-- JAVASCRIPT MODE SOMBRE -->
+<script src="script.js"></script>
 
-<script>
-
-document.addEventListener("DOMContentLoaded", function() {
-
-    const darkMode = document.getElementById("darkMode");
-
-    darkMode.addEventListener("click", function() {
-
-        document.body.classList.toggle("dark");
-
-        if (document.body.classList.contains("dark")) {
-
-            darkMode.textContent = "☀️ Mode clair";
-
-        } else {
-
-            darkMode.textContent = "🌙 Mode sombre";
-
-        }
-
-    });
-
-});
-
-</script>
-<button onclick="changerCouleur()">Changer la couleur</button>
 </body>
 </html>
+
+
