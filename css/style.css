@@ -1,13 +1,19 @@
 
-/* =================================
-   1. CONFIGURATION GENERALE
-================================= */
+
+
+/* ==================================
+   PORTFOLIO PROFESSIONNEL
+   ABOUBACAR CAMARA
+================================== */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -25,20 +31,10 @@ body {
     background: var(--background);
     color: var(--text);
     line-height: 1.7;
-    transition: background 0.3s, color 0.3s;
+    transition: 0.3s;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-section {
-    scroll-margin-top: 120px;
-}
-
-/* =================================
-   2. MODE SOMBRE
-================================= */
+/* MODE SOMBRE */
 
 body.mode-sombre {
     --background: #121212;
@@ -50,55 +46,27 @@ body.mode-sombre {
 
 body.mode-sombre header,
 body.mode-sombre section,
-body.mode-sombre footer {
+body.mode-sombre .contact {
     background: var(--surface);
     color: var(--text);
 }
 
 body.mode-sombre h2,
 body.mode-sombre h3,
-body.mode-sombre section p {
+body.mode-sombre section p,
+body.mode-sombre .contact p {
     color: var(--text);
-}
-
-body.mode-sombre .logo {
-    color: #69a8ff;
 }
 
 body.mode-sombre nav a {
     color: #ffffff;
 }
 
-body.mode-sombre nav a:hover {
+body.mode-sombre .logo {
     color: #69a8ff;
 }
 
-body.mode-sombre .project {
-    background: #292929;
-    color: #ffffff;
-}
-
-body.mode-sombre .project h3,
-body.mode-sombre .project p {
-    color: #ffffff;
-}
-
-body.mode-sombre .skills span {
-    background: #293d58;
-    color: #ffffff;
-}
-
-body.mode-sombre .profile-photo {
-    border-color: #69a8ff;
-}
-
-body.mode-sombre #contact a {
-    color: #ffffff;
-}
-
-/* =================================
-   3. EN-TETE
-================================= */
+/* HEADER */
 
 header {
     background: var(--surface);
@@ -127,8 +95,8 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
     color: var(--text);
+    text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -137,49 +105,56 @@ nav a:hover {
     color: var(--primary);
 }
 
-/* =================================
-   4. BOUTON MODE SOMBRE
-================================= */
+/* BOUTONS */
 
-#darkMode {
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 11px 18px;
-    border-radius: 30px;
+button {
     cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 22px;
     font-weight: bold;
     transition: 0.3s;
 }
 
-#darkMode:hover {
-    background: var(--secondary);
-    transform: scale(1.05);
+button:hover {
+    transform: translateY(-3px);
 }
 
-/* =================================
-   5. ACCUEIL
-================================= */
+#darkMode {
+    background: var(--primary);
+    color: white;
+}
+
+#darkMode:hover {
+    background: var(--secondary);
+}
+
+/* ACCUEIL */
 
 .hero {
-    min-height: 550px;
-    padding: 100px 8%;
-    background: linear-gradient(135deg, #1769e0, #082f78);
+    min-height: 75vh;
+    padding: 70px 8%;
+    background: linear-gradient(135deg, #123b70, #1769e0);
     color: white;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
 }
 
 .hero h1 {
     color: white;
-    font-size: 45px;
+    font-size: clamp(30px, 5vw, 48px);
     margin-bottom: 20px;
 }
 
 .hero p {
     color: white;
-    font-size: 19px;
-    max-width: 850px;
-    margin-bottom: 30px;
+    max-width: 750px;
+    font-size: 18px;
+    margin-bottom: 25px;
 }
 
 .hero .btn {
@@ -191,7 +166,6 @@ nav a:hover {
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 .hero .btn:hover {
@@ -199,72 +173,32 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
-/* =================================
-   6. WHATSAPP
-================================= */
-
-.whatsapp-buttons {
-    margin-top: 20px;
-}
-
-.whatsapp-buttons .btn {
-    margin-right: 10px;
-}
-
-/* =================================
-   7. JAVASCRIPT
-================================= */
-
-.javascript-buttons {
-    margin-top: 20px;
-}
-
-.javascript-buttons button {
-    padding: 12px 22px;
-    margin: 6px;
-    border: none;
-    border-radius: 25px;
-    background: white;
-    color: #1769e0;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.javascript-buttons button:hover {
-    background: #dceaff;
-    transform: translateY(-3px);
-}
-
-/* =================================
-   8. SECTIONS
-================================= */
+/* SECTIONS */
 
 section {
-    padding: 75px 8%;
+    padding: 65px 8%;
     background: var(--surface);
     color: var(--text);
     margin: 25px auto;
     max-width: 1200px;
     border-radius: 15px;
     box-shadow: var(--shadow);
+    scroll-margin-top: 120px;
+    transition: 0.3s;
 }
 
 section h2 {
-    font-size: 30px;
     color: var(--heading);
+    font-size: 30px;
     margin-bottom: 25px;
 }
 
 section p {
-    font-size: 16px;
-    margin-bottom: 15px;
     color: var(--text);
+    margin-bottom: 15px;
 }
 
-/* =================================
-   9. PHOTO DE PROFIL
-================================= */
+/* PHOTO */
 
 .profile-photo {
     width: 180px;
@@ -276,51 +210,71 @@ section p {
     margin: 0 auto 25px;
 }
 
-/* =================================
-   10. COMPETENCES ET LANGUES
-================================= */
+/* COMPETENCES */
 
-.skills {
+.skills,
+.skills-container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    margin-top: 25px;
 }
 
-.skills span {
+.skills span,
+.skill-card {
     background: #e3efff;
     color: #1255a5;
-    padding: 12px 22px;
-    border-radius: 25px;
+    padding: 15px 22px;
+    border-radius: 12px;
     font-weight: bold;
     transition: 0.3s;
 }
 
-.skills span:hover {
-    transform: translateY(-4px);
+body.mode-sombre .skills span,
+body.mode-sombre .skill-card {
+    background: #293d58;
+    color: #ffffff;
 }
 
-/* =================================
-   11. CARTES DES PROJETS
-================================= */
+.skill-card:hover,
+.skills span:hover {
+    transform: translateY(-5px);
+}
 
-.project {
+/* PROJETS */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project,
+.project-card {
     background: var(--background);
+    color: var(--text);
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 15px;
     border-left: 5px solid var(--primary);
-    margin-top: 20px;
     box-shadow: var(--shadow);
     transition: 0.3s;
 }
 
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+.project h3,
+.project-card h3 {
+    color: var(--heading);
+    margin-bottom: 15px;
 }
 
-.project h3 {
-    color: var(--heading);
-    margin-bottom: 12px;
+.project p,
+.project-card p {
+    color: var(--text);
+}
+
+.project:hover,
+.project-card:hover {
+    transform: translateY(-7px);
 }
 
 .project-tag {
@@ -329,39 +283,66 @@ section p {
     color: #1255a5;
     padding: 6px 14px;
     border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
     margin-top: 10px;
 }
 
 body.mode-sombre .project-tag {
     background: #293d58;
-    color: #ffffff;
+    color: white;
 }
 
-/* =================================
-   12. CONTACT
-================================= */
+/* WHATSAPP ET JAVASCRIPT */
 
-#contact a {
+.whatsapp-buttons,
+.javascript-buttons {
+    margin-top: 20px;
+}
+
+.javascript-buttons button {
+    background: white;
+    color: var(--primary);
+    margin: 6px;
+}
+
+/* CONTACT */
+
+#contact,
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact h2 {
+    color: var(--heading);
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#contact a,
+.contact-buttons a {
     display: inline-block;
-    background: var(--primary);
+    background: #2878a5;
     color: white;
-    padding: 12px 25px;
-    border-radius: 25px;
+    padding: 13px 22px;
+    border-radius: 8px;
     text-decoration: none;
-    margin-top: 15px;
+    font-weight: bold;
+    margin: 8px;
     transition: 0.3s;
 }
 
-#contact a:hover {
-    background: var(--secondary);
+#contact a:hover,
+.contact-buttons a:hover {
+    background: #16324f;
     transform: translateY(-3px);
 }
 
-/* =================================
-   13. PIED DE PAGE
-================================= */
+/* PIED DE PAGE */
 
 footer {
     background: #082f78;
@@ -371,16 +352,13 @@ footer {
     margin-top: 40px;
 }
 
-/* =================================
-   14. RESPONSIVE MOBILE
-================================= */
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
 
     header {
         flex-direction: column;
         text-align: center;
-        padding: 18px 4%;
     }
 
     nav {
@@ -393,8 +371,7 @@ footer {
     }
 
     .hero {
-        padding: 65px 6%;
-        text-align: center;
+        padding: 50px 6%;
     }
 
     .hero h1 {
@@ -403,10 +380,6 @@ footer {
 
     .hero p {
         font-size: 16px;
-    }
-
-    .hero .btn {
-        padding: 11px 17px;
     }
 
     section {
@@ -418,22 +391,13 @@ footer {
         font-size: 25px;
     }
 
-    .skills {
-        justify-content: center;
-    }
-
     .profile-photo {
         width: 145px;
         height: 145px;
     }
-
-    .whatsapp-buttons .btn {
-        margin: 7px;
-    }
 }
 
 @media (max-width: 400px) {
-
     .hero h1 {
         font-size: 26px;
     }
@@ -441,284 +405,4 @@ footer {
     nav {
         gap: 9px;
     }
-
-   
-/* ANIMATIONS DES CARTES */
-.project-card,
-.skill-card,
-section {
-    transition: all 0.35s ease;
 }
-
-/* EFFET AU SURVOL */
-.project-card:hover,
-.skill-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* BOUTONS PROFESSIONNELS */
-button {
-    cursor: pointer;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 22px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
-}
-
-/* ANIMATION DOUCE */
-html {
-    scroll-behavior: smooth;
-}
-document.addEventListener("DOMContentLoaded", function () {
-
-    // BOUTON ME SALUER
-    const saluerButton = document.getElementById("saluer");
-
-    if (saluerButton) {
-        saluerButton.addEventListener("click", function () {
-            alert("Bienvenue sur mon portfolio ! Je suis Aboubacar Camara.");
-        });
-    }
-
-    // MODE SOMBRE
-    const darkMode = document.getElementById("darkMode");
-
-    if (darkMode) {
-
-        // Récupérer le thème enregistré
-        const themeEnregistre = localStorage.getItem("portfolio-theme");
-
-        if (themeEnregistre === "dark") {
-            document.body.classList.add("mode-sombre");
-            darkMode.textContent = "☀️ Mode clair";
-        } else {
-            document.body.classList.remove("mode-sombre");
-            darkMode.textContent = "🌙 Mode sombre";
-        }
-
-        // Changer le thème au clic
-        darkMode.addEventListener("click", function () {
-
-            document.body.classList.toggle("mode-sombre");
-
-            const sombre = document.body.classList.contains("mode-sombre");
-
-            if (sombre) {
-                darkMode.textContent = "☀️ Mode clair";
-                localStorage.setItem("portfolio-theme", "dark");
-            } else {
-                darkMode.textContent = "🌙 Mode sombre";
-                localStorage.setItem("portfolio-theme", "light");
-            }
-
-        });
-    }
-
-});
-
-
-    nav a {
-        font-size: 13px;
-    }
-
-}
-
-   
-/* SECTION ACCUEIL PROFESSIONNELLE */
-.hero {
-    min-height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #123b70, #1769e0);
-    color: white;
-    border-radius: 0 0 30px 30px;
-}
-
-.hero h1 {
-    font-size: clamp(30px, 5vw, 48px);
-    margin-bottom: 20px;
-}
-
-.hero p {
-    max-width: 700px;
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-
-.hero button {
-    background: white;
-    color: #1769e0;
-    padding: 14px 28px;
-    font-size: 16px;
-}
-
-/* TÉLÉPHONE */
-@media (max-width: 600px) {
-    .hero {
-        min-height: 60vh;
-        padding: 40px 15px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-}
-
-
-/* CARTES DES COMPÉTENCES */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    margin-top: 25px;
-}
-
-.skill-card {
-    background: var(--surface);
-    color: var(--text);
-    padding: 25px 15px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(100, 100, 100, 0.12);
-    font-weight: bold;
-}
-   
-/* SECTION PROJETS */
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.project-card {
-    background: var(--surface);
-    color: var(--text);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(100, 100, 100, 0.12);
-}
-
-.project-card h3 {
-    color: var(--heading);
-    margin-bottom: 15px;
-}
-
-.project-card p {
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.project-card:hover {
-    transform: translateY(-7px);
-}
-
-
-.skill-card:hover {
-    transform: translateY(-7px);
-    border-color: var(--primary);
-}
-
-
-/* SECTION CONTACT */
-#contact {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-#contact p {
-    line-height: 1.8;
-    margin: 15px 0;
-}
-
-#contact a {
-    display: inline-block;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
-    margin: 8px;
-    transition: 0.3s ease;
-}
-
-#contact a:hover {
-    color: var(--secondary);
-    transform: translateY(-3px);
-}
-
-/* BOUTONS DE CONTACT */
-#contact button {
-    background: var(--primary);
-    color: white;
-    margin: 10px;
-}
-
-   
-/* SECTION CONTACT */
-.contact {
-    padding: 60px 20px;
-    text-align: center;
-    background: var(--surface);
-    color: var(--text);
-}
-
-.contact h2 {
-    color: var(--heading);
-    margin-bottom: 15px;
-}
-
-.contact p {
-    margin-bottom: 25px;
-}
-
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.contact-buttons a {
-    display: inline-block;
-    background-color: #2878a5;
-    color: #ffffff !important;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 13px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    visibility: visible;
-    opacity: 1;
-}
-
-
-/* Correction des boutons en mode sombre */
-
-body.mode-sombre .contact-buttons a {
-    color: #ffffff !important;
-    background-color: #2878a5 !important;
-}
-
-body.mode-sombre .contact-buttons a:hover {
-    background-color: #16324f !important;
-    color: #ffffff !important;
-}
-
-.contact-buttons a:hover {
-    background: #16324f;
-    transform: translateY(-3px);
-}
-
