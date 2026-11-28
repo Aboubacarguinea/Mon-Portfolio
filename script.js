@@ -1,4 +1,4 @@
-
+alert("JavaScript est chargé !");
 document.addEventListener("DOMContentLoaded", function () {
 
     // BOUTON ME SALUER
