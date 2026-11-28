@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Restaurer le thème enregistré
         if (localStorage.getItem("portfolio-theme") === "dark") {
             document.body.classList.add("mode-sombre");
+            alert("Le mode sombre fonctionne !");
             darkMode.textContent = "☀️ Mode clair";
         }
 
