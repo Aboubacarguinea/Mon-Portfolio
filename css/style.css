@@ -705,6 +705,18 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 
+/* Correction des boutons en mode sombre */
+
+body.mode-sombre .contact-buttons a {
+    color: #ffffff !important;
+    background-color: #2878a5 !important;
+}
+
+body.mode-sombre .contact-buttons a:hover {
+    background-color: #16324f !important;
+    color: #ffffff !important;
+}
+
 .contact-buttons a:hover {
     background: #16324f;
     transform: translateY(-3px);
