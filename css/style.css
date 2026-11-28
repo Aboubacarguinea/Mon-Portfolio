@@ -529,3 +529,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 }
+
+   
+/* SECTION ACCUEIL PROFESSIONNELLE */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #123b70, #1769e0);
+    color: white;
+    border-radius: 0 0 30px 30px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.hero button {
+    background: white;
+    color: #1769e0;
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+/* TÉLÉPHONE */
+@media (max-width: 600px) {
+    .hero {
+        min-height: 60vh;
+        padding: 40px 15px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
