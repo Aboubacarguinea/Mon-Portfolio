@@ -406,3 +406,24 @@ footer {
         gap: 9px;
     }
 }
+
+* CORRECTION VISIBILITE EMAIL */
+
+#contact a[href^="mailto:"],
+.contact a[href^="mailto:"] {
+    display: inline-block !important;
+    background: #2878a5 !important;
+    color: #ffffff !important;
+    padding: 13px 22px !important;
+    border-radius: 8px;
+    text-decoration: none !important;
+    font-weight: bold;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body.mode-sombre #contact a[href^="mailto:"],
+body.mode-sombre .contact a[href^="mailto:"] {
+    background: #2878a5 !important;
+    color: #ffffff !important;
+}
